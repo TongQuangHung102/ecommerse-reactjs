@@ -1,4 +1,4 @@
-@import '@styles/_mixin.module.scss';
+@use '@styles/mixin.module.scss' as *;
 .btn {
     @include btn(30px, 30px, 0px);
 }

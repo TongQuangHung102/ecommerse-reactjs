@@ -4,6 +4,7 @@ import insIcon from '@icons/svgs/insIcon.svg';
 import ytbIcon from '@icons/svgs/ytbIcon.svg';
 function BoxIcon({ type, href }) {
     const { boxIcon } = styles;
+
     const handleRenderIcon = (type) => {
         switch (type) {
             case 'fb':
@@ -14,6 +15,7 @@ function BoxIcon({ type, href }) {
                 return ytbIcon;
         }
     };
+
     return (
         <div className={boxIcon}>
             <img src={handleRenderIcon(type)} alt={type} />
