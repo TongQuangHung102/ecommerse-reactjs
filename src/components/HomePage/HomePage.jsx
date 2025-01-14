@@ -4,11 +4,15 @@ import styles from './styles.module.scss';
 import AdvanceHeading from '@components/AdvanceHeading/AdvanceHeading';
 import Info from '@components/Info/Info';
 import HeadingListProduct from '@components/HeadingListProduct/HeadingListProduct';
+import { useEffect } from 'react';
+import { getProducts } from '@/apis/productsService';
 function HomePage() {
-    const { container } = styles;
+    useEffect(() => {
+        getProducts();
+    }, []);
     return (
         <>
-            <div className={container}>
+            <div>
                 <MyHeader />
                 <Banner />
                 <Info />
